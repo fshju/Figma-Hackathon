@@ -55,7 +55,7 @@ export default function Header() {
             </span>
           </button>
 
-          <Link href="/cart">
+          <Link href="/comparison">
             <span className="text-gray-600 hover:text-yellow-600">
               <FaShoppingCart />
             </span>
@@ -100,7 +100,7 @@ export default function Header() {
               <span className="text-gray-600 hover:text-red-600">
                 <FaHeart />
               </span>
-              <Link href="/cart">
+              <Link href="/comparison">
                 <span className="text-gray-600 hover:text-yellow-600">
                   <FaShoppingCart />
                 </span>

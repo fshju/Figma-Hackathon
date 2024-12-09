@@ -1,5 +1,4 @@
 import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
 import Footerimg from "@/components/Footerimg";
 const Contact = () => {
   return (
