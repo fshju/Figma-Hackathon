@@ -1,6 +1,8 @@
 import React from "react";
 import OurProducts from "@/components/OurProducts";
 import ScrollProducts from "@/components/ScrollProducts";
+import Link from "next/link"; 
+
 
 const home = () => {
   return (
@@ -31,10 +33,11 @@ const home = () => {
               <p className="mt-6 text-gray-600 text-lg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis.
-              </p>
-              <button className="mt-8 bg-[#B8860B] text-white px-12 py-4 font-medium hover:bg-[#986f07] transition-colors">
+              </p><Link href="/shop">
+              <button className="mt-8 bg-[#B8860B] text-white px-12 py-4 font-medium hover:bg-[#986f07] transition-colors hover:scale-110 transition duration-300">
                 BUY NOW
               </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -47,7 +50,7 @@ const home = () => {
         <p className="text-lg">Lorem ipsum dolor sit amet, consecteture adipiscing elit.</p>
       </div>
       <br /> <br />
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-6">
       <img src="H1.png" className="w-full  sm:w-1/4 transition-transform duration-300 hover:scale-105" />
       <img src="H2.png" className="w-full  sm:w-1/4 transition-transform duration-300 hover:scale-105" />
       <img src="H3.png" className="w-full  sm:w-1/4 transition-transform duration-300 hover:scale-105" />
@@ -66,9 +69,11 @@ const home = () => {
       <OurProducts/>
       <br />
       <div className="container text-center">
-      <button className="text-[#B8860B] hover:text-black hover:bg-[#B8860B] transition-transform duration-400 border-2 border-[#B8860B] px-8">
+        <Link href="/shop">
+      <button className="text-[#B8860B] hover:text-white hover:bg-[#B8860B]   border-2 border-[#B8860B] px-8 hover:scale-110 transition duration-300">
         Show More
       </button>
+      </Link>
       </div>
       
       <br />

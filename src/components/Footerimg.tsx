@@ -1,10 +1,10 @@
 const Footerimg = () => {
   return (
-    <div className="bg-[#f7efde] p-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <div className="bg-yellow-100 p-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center ">
         {/* High Quality */}
-        <div>
-          <div className="flex justify-center items-center">
+        <div className="hover:scale-110 transition duration-300">
+          <div className="flex justify-center items-center ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -20,11 +20,11 @@ const Footerimg = () => {
               />
             </svg>
           </div>
-          <h3 className="font-bold text-lg mt-2">High Quality</h3>
+          <h3 className="font-bold text-lg mt-2 ">High Quality</h3>
           <p className="text-gray-600">Crafted from top materials</p>
         </div>
         {/* Warranty Protection */}
-        <div>
+        <div className="hover:scale-110 transition duration-300">
           <div className="flex justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ const Footerimg = () => {
           <p className="text-gray-600">Over 2 years</p>
         </div>
         {/* Free Shipping */}
-        <div>
+        <div className="hover:scale-110 transition duration-300">
           <div className="flex justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ const Footerimg = () => {
           <p className="text-gray-600">Orders over $150</p>
         </div>
         {/* 24/7 Support */}
-        <div>
+        <div className="hover:scale-110 transition duration-300">
           <div className="flex justify-center items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

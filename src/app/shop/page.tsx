@@ -125,7 +125,27 @@ const products = [
 
   return  (
     <div>
-      <img src="Shop.png" />
+      <div className='relative w-full'>
+      <img src="Rectangle 1.png"  className='object-cover top-0 left-0 z-10'/>
+      <div className='absolute top-0 left-0  w-full h-full flex flex-col items-center justify-center z-20 text-center '>
+<h1 className='text-black sm:text-4xl font-bold'>
+  Shop
+</h1> 
+<div className='flex '>
+  <Link href="/">
+<button className='px-1 py-1 md:py-1 text-xs md:text-xl  hover:text-red-500 transition duration-200'>
+  Home 
+</button>
+</Link>
+<p className='py-1 md:py-1 text-xs md:text-xl'>&gt;</p>
+<Link href="/shop">
+<button className='px-1 py-1 md:py-1 text-xs md:text-xl hover:text-red-500 transition duration-200'>
+ Shop
+</button>
+</Link>
+</div>
+</div>  
+      </div>
       <br />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
       {products.map((product, index) => (
@@ -151,7 +171,7 @@ const products = [
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <Link href="/cart">
-              <button className="hover:transition-transform duration-30 hover:bg-blue-800 bg-blue-500 text-white px-4 py-2 rounded-lg mb-3">
+              <button className="hover:transition-transform duration-30 hover:bg-[#B8860B] hover:text-white bg-white text-[#B8860B] px-4 py-2  mb-3">
                 Add to Cart
               </button>
               </Link>
@@ -188,14 +208,19 @@ const products = [
     <br />
     <div className="flex justify-center items-center space-x-4 p-4">
   {/* <!-- Active Page --> */}
-  <button className="w-10 h-10 bg-yellow-700 text-white rounded-md hover:bg-yellow-500">1</button>
+  <button className="w-10 h-10 bg-yellow-700 text-white rounded-md hover:bg-yellow-500 hover:scale-110 transition duration-300">1</button>
 
   {/* <!-- Other Pages --> */}
-  <button className="w-10 h-10 bg-yellow-100 text-black rounded-md hover:bg-yellow-400">2</button>
-  <button className="w-10 h-10 bg-yellow-100 text-black rounded-md hover:bg-yellow-400">3</button>
-
+  <Link href="/shop">
+  <button className="w-10 h-10 bg-yellow-100 text-black rounded-md hover:bg-yellow-400 hover:scale-110 transition duration-300">2</button>
+  </Link>
+  <Link href="/shop">
+  <button className="w-10 h-10 bg-yellow-100 text-black rounded-md hover:bg-yellow-400 hover:scale-110 transition duration-300">3</button>
+  </Link>
   {/* <!-- Next Button --> */}
-  <button className="px-4 py-2 bg-yellow-100 text-black rounded-md hover:bg-yellow-400">Next</button>
+   <Link href="/shop">
+  <button className="px-4 py-2 bg-yellow-100 text-black rounded-md hover:bg-yellow-400 hover:scale-110 transition duration-300">Next</button>
+  </Link>
 </div>
 <br />
 <br />

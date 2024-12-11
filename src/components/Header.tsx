@@ -23,16 +23,16 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link href="/" className="text-gray-800 hover:text-yellow-600">
+          <Link href="/" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
             Home
           </Link>
-          <Link href="/shop" className="text-gray-800 hover:text-yellow-600">
+          <Link href="/shop" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
             Shop
           </Link>
-          <Link href="/about" className="text-gray-800 hover:text-yellow-600">
+          <Link href="/about" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
             Blog
           </Link>
-          <Link href="/contact" className="text-gray-800 hover:text-yellow-600">
+          <Link href="/contact" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
             Contact
           </Link>
         </div>
@@ -40,24 +40,24 @@ export default function Header() {
         {/* Icons */}
         <div className="hidden md:flex items-center space-x-4">
           <button>
-            <span className="text-gray-600 hover:text-yellow-600">
-              <FaUser />
+            <span className="text-gray-600 hover:text-blue-700">
+              <FaUser className="hover:scale-110 transition duration-300" />
             </span>
           </button>
           <button>
-            <span className="text-gray-600 hover:text-yellow-600">
-              <FaSearch />
+            <span className="text-gray-600 hover:text-purple-600">
+              <FaSearch className="hover:scale-110 transition duration-300" />
             </span>
           </button>
           <button>
             <span className="text-gray-600 hover:text-red-600">
-              <FaHeart />
+              <FaHeart className="hover:scale-110 transition duration-300" />
             </span>
           </button>
 
           <Link href="/comparison">
-            <span className="text-gray-600 hover:text-yellow-600">
-              <FaShoppingCart />
+            <span className="text-gray-600 hover:text-orange-600 ">
+              <FaShoppingCart className="hover:scale-110 transition duration-300" />
             </span>
           </Link>
         </div>
@@ -75,33 +75,33 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-sm">
           <div className="flex flex-col items-start p-4 space-y-4">
-            <Link href="/" className="text-gray-800 hover:text-yellow-6">
+            <Link href="/" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
               Home
             </Link>
-            <Link href="/shop" className="text-gray-800 hover:text-yellow-6">
+            <Link href="/shop" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
               Shop
             </Link>
-            <Link href="/about" className="text-gray-800 hover:text-yellow-60">
+            <Link href="/about" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
               Blog
             </Link>
             <Link
               href="/contact"
-              className="text-gray-800 hover:text-yellow-600"
+              className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
             >
               Contact
             </Link>
             <div className="flex gap-5 start">
-              <span className="text-gray-600 hover:text-yellow-600">
+              <span className="text-gray-600 hover:text-blue-400 hover:scale-110 transition duration-300">
                 <FaUser />
               </span>
-              <span className="text-gray-600 hover:text-yellow-600">
+              <span className="text-gray-600 hover:text-purple-400 hover:scale-110 transition duration-300">
                 <FaSearch />
               </span>
-              <span className="text-gray-600 hover:text-red-600">
+              <span className="text-gray-600 hover:text-red-600 hover:scale-110 transition duration-300">
                 <FaHeart />
               </span>
               <Link href="/comparison">
-                <span className="text-gray-600 hover:text-yellow-600">
+                <span className="text-gray-600 hover:text-orange-400 hover:scale-110 transition duration-300">
                   <FaShoppingCart />
                 </span>
               </Link>

@@ -1,10 +1,28 @@
 import React from "react";
+import Link from "next/link";
 import Footerimg from "@/components/Footerimg";
 const checkout = () => {
   return (
     <div>
-      <img src="Checkout.png" />
-      <br />
+       <div className="relative w-full">
+        <img src="Rectangle 1.png" className="object-cover top-0 left-0 z-10" />
+        <div className="absolute top-0 left-0  w-full h-full flex flex-col items-center justify-center z-20 text-center ">
+          <h1 className="text-black sm:text-4xl font-bold">Checkout</h1>
+          <div className="flex ">
+            <Link href="/">
+              <button className="px-1 py-1 md:py-1 text-xs md:text-xl  hover:text-red-500 transition duration-200">
+                Home
+              </button>
+            </Link>
+            <p className="py-1 md:py-1 text-xs md:text-xl">&gt;</p>
+            <Link href="/checkout">
+              <button className="px-1 py-1 md:py-1 text-xs md:text-xl hover:text-red-500 transition duration-200">
+                Checkout
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="bg-gray-100 min-h-screen flex justify-center items-center py-10">
         <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-4xl">
           <h1 className="text-2xl font-bold mb-6">Billing details</h1>
@@ -106,7 +124,7 @@ const checkout = () => {
                   <span>Cash on Delivery</span>
                 </label>
               </div>
-              <button className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full mt-6 hover:bg-blue-700">
+              <button className="bg-blue-600 text-white py-3 px-6 rounded-lg w-full mt-6 hover:bg-blue-700 hover:scale-105 transition duration-300">
                 Place order
               </button>
             </div>

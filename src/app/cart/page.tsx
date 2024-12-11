@@ -2,11 +2,28 @@ import Footerimg from "@/components/Footerimg";
 import Link from "next/link";
 import React from "react";
 
-
 const CartPage = () => {
   return (
     <div>
-      <img src="Cart.png" />
+      <div className="relative w-full">
+        <img src="Rectangle 1.png" className="object-cover top-0 left-0 z-10" />
+        <div className="absolute top-0 left-0  w-full h-full flex flex-col items-center justify-center z-20 text-center ">
+          <h1 className="text-black sm:text-4xl font-bold">Cart</h1>
+          <div className="flex ">
+            <Link href="/">
+              <button className="px-1 py-1 md:py-1 text-xs md:text-xl  hover:text-red-500 transition duration-200">
+                Home
+              </button>
+            </Link>
+            <p className="py-1 md:py-1 text-xs md:text-xl">&gt;</p>
+            <Link href="/cart">
+              <button className="px-1 py-1 md:py-1 text-xs md:text-xl hover:text-red-500 transition duration-200">
+                Cart
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
       <br />
       <br />
       <div className="bg-gray-100 min-h-screen py-10">
@@ -29,7 +46,7 @@ const CartPage = () => {
                   <tr className="border-b">
                     <td className="py-4 px-4 flex items-center space-x-4">
                       <img
-                        src="H1.png" 
+                        src="H1.png"
                         alt="Asgaard sofa"
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded"
                       />
@@ -85,7 +102,7 @@ const CartPage = () => {
                 <span>Rs. 250,000.00</span>
               </div>
               <Link href="/checkout">
-                <button className="bg-blue-600 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-700 sm:py-3 sm:px-6">
+                <button className="bg-blue-600 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-700 sm:py-3 sm:px-6 hover:scale-105 transition duration-300">
                   Check Out
                 </button>
               </Link>

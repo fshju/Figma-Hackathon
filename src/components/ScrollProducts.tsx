@@ -77,7 +77,7 @@ const ScrollProducts: React.FC = () => {
               Our designer already made a lot of beautiful prototypes of rooms that inspire you.
             </p>
             <Link href="/shop">
-            <button className="mt-6 bg-yellow-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition">
+            <button className="mt-6 bg-yellow-600 hover:scale-110 transition duration-300 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition">
               Explore More
             </button>
             </Link>

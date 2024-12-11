@@ -1,3 +1,4 @@
+"use client"
 import { FaHeart} from "react-icons/fa";
 import { MdCompareArrows } from "react-icons/md";
 import { FaShare } from "react-icons/fa";
@@ -89,7 +90,7 @@ export default function OurProducts() {
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <Link href="/cart">
-              <button className="hover:transition-transform duration-30 hover:bg-blue-800 bg-blue-500 text-white px-4 py-2 rounded-lg mb-3">
+              <button className="hover:transition-transform duration-30 hover:bg-[#B8860B] hover:text-white bg-white text-[#B8860B] px-4 py-2  mb-3">
                Add to Cart
               </button>
               </Link> 
@@ -98,9 +99,11 @@ export default function OurProducts() {
                 <FaShare className="hover:text-blue-300"/>
                 Share
                 </button>
+                <Link href="/comparison">
                 <button className="text-white">
                 <MdCompareArrows className="hover:text-green-300"/> Compare
                 </button>
+                </Link>
                 <button className="text-white">
                 <FaHeart className="hover:text-red-500"/> Like
                 </button>
