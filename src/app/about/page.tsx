@@ -4,7 +4,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <div>
-       <div className="relative w-full">
+      <div className="relative w-full">
         <img src="Rectangle 1.png" className="object-cover top-0 left-0 z-10" />
         <div className="absolute top-0 left-0  w-full h-full flex flex-col items-center justify-center z-20 text-center ">
           <h1 className="text-black sm:text-4xl font-bold">Blog</h1>
@@ -17,14 +17,14 @@ const About = () => {
             <p className="py-1 md:py-1 text-xs md:text-xl">&gt;</p>
             <Link href="/about">
               <button className="px-1 py-1 md:py-1 text-xs md:text-xl hover:text-red-500 transition duration-200">
-              Blog
+                Blog
               </button>
             </Link>
           </div>
         </div>
       </div>
-     {/* Main Content */}
-     <div className="min-h-screen bg-gray-100 py-10">
+      {/* Main Content */}
+      <div className="min-h-screen bg-gray-100 py-10">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content Area */}
           <div className="lg:col-span-3 space-y-8">
@@ -34,7 +34,7 @@ const About = () => {
                 className="bg-white shadow-md rounded-lg overflow-hidden"
               >
                 <Image
-                  src={`/image ${index + 1}.png`} 
+                  src={`/image ${index + 1}.png`}
                   alt={`Blog Post ${index + 1}`}
                   width={800}
                   height={400}
@@ -157,12 +157,3 @@ const About = () => {
 };
 
 export default About;
-
-
-
-
-
-
-
-
-

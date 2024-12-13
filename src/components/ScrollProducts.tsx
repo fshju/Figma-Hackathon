@@ -1,7 +1,7 @@
-  'use client';
+"use client";
 
-import React, { useRef, useEffect, MutableRefObject } from 'react';
-import Link from 'next/link';
+import React, { useRef, useEffect, MutableRefObject } from "react";
+import Link from "next/link";
 
 interface Slide {
   id: number;
@@ -14,24 +14,39 @@ const ScrollProducts: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
 
   const slides: Slide[] = [
-    { id: 1, image: 'scroll1.png', title: 'Inner Peace', subtitle: '01 — Bed Room' },
-    { id: 2, image: 'scroll2.png', title: 'Cozy Space', subtitle: '02 — Dining Room' },
-    { id: 3, image: 'scroll3.png', title: 'Modern Touch', subtitle: '03 — Living Room' },
+    {
+      id: 1,
+      image: "scroll1.png",
+      title: "Inner Peace",
+      subtitle: "01 — Bed Room",
+    },
+    {
+      id: 2,
+      image: "scroll2.png",
+      title: "Cozy Space",
+      subtitle: "02 — Dining Room",
+    },
+    {
+      id: 3,
+      image: "scroll3.png",
+      title: "Modern Touch",
+      subtitle: "03 — Living Room",
+    },
   ];
 
   // Duplicating slides for infinite effect
   const infiniteSlides = [...slides, ...slides, ...slides];
 
-  const handleScroll = (direction: 'left' | 'right') => {
+  const handleScroll = (direction: "left" | "right") => {
     const current = scrollRef.current;
     if (!current) return;
 
     const scrollAmount = current.offsetWidth; // Scroll by the width of the container
 
-    if (direction === 'right') {
-      current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    if (direction === "right") {
+      current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     } else {
-      current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
     }
   };
 
@@ -55,10 +70,10 @@ const ScrollProducts: React.FC = () => {
       current.scrollLeft = current.scrollWidth / 3;
 
       // Add event listener for handling infinite scroll
-      current.addEventListener('scroll', handleInfiniteScroll);
+      current.addEventListener("scroll", handleInfiniteScroll);
 
       return () => {
-        current.removeEventListener('scroll', handleInfiniteScroll);
+        current.removeEventListener("scroll", handleInfiniteScroll);
       };
     }
   }, []);
@@ -74,12 +89,13 @@ const ScrollProducts: React.FC = () => {
               50+ Beautiful rooms inspiration
             </h1>
             <p className="mt-4 text-gray-600">
-              Our designer already made a lot of beautiful prototypes of rooms that inspire you.
+              Our designer already made a lot of beautiful prototypes of rooms
+              that inspire you.
             </p>
             <Link href="/shop">
-            <button className="mt-6 bg-yellow-600 hover:scale-110 transition duration-300 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition">
-              Explore More
-            </button>
+              <button className="mt-6 bg-yellow-600 hover:scale-110 transition duration-300 text-white px-6 py-2 rounded-lg font-medium hover:bg-yellow-700 transition">
+                Explore More
+              </button>
             </Link>
           </div>
 
@@ -101,8 +117,12 @@ const ScrollProducts: React.FC = () => {
                     className="rounded-lg object-cover w-full h-64 sm:h-80"
                   />
                   <div className="absolute bottom-4 left-4 bg-white p-4 rounded-lg shadow-lg">
-                    <span className="text-gray-500 text-sm">{slide.subtitle}</span>
-                    <p className="text-lg font-semibold text-gray-800">{slide.title}</p>
+                    <span className="text-gray-500 text-sm">
+                      {slide.subtitle}
+                    </span>
+                    <p className="text-lg font-semibold text-gray-800">
+                      {slide.title}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -112,7 +132,7 @@ const ScrollProducts: React.FC = () => {
             <div className="absolute top-1/2 transform -translate-y-1/2 left-2">
               <button
                 className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-                onClick={() => handleScroll('left')}
+                onClick={() => handleScroll("left")}
               >
                 &lt;
               </button>
@@ -120,7 +140,7 @@ const ScrollProducts: React.FC = () => {
             <div className="absolute top-1/2 transform -translate-y-1/2 right-2">
               <button
                 className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-                onClick={() => handleScroll('right')}
+                onClick={() => handleScroll("right")}
               >
                 &gt;
               </button>

@@ -4,7 +4,7 @@ import Footerimg from "@/components/Footerimg";
 const checkout = () => {
   return (
     <div>
-       <div className="relative w-full">
+      <div className="relative w-full">
         <img src="Rectangle 1.png" className="object-cover top-0 left-0 z-10" />
         <div className="absolute top-0 left-0  w-full h-full flex flex-col items-center justify-center z-20 text-center ">
           <h1 className="text-black sm:text-4xl font-bold">Checkout</h1>

@@ -6,6 +6,11 @@ import { FaUser, FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Function to handle menu item click
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false); // Close the menu
+  };
+
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
@@ -23,16 +28,32 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-8 items-center">
-          <Link href="/" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+          <Link
+            href="/"
+            onClick={handleMenuItemClick}
+            className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+          >
             Home
           </Link>
-          <Link href="/shop" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+          <Link
+            href="/shop"
+            onClick={handleMenuItemClick}
+            className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+          >
             Shop
           </Link>
-          <Link href="/about" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+          <Link
+            href="/about"
+            onClick={handleMenuItemClick}
+            className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+          >
             Blog
           </Link>
-          <Link href="/contact" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+          <Link
+            href="/contact"
+            onClick={handleMenuItemClick}
+            className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+          >
             Contact
           </Link>
         </div>
@@ -54,9 +75,8 @@ export default function Header() {
               <FaHeart className="hover:scale-110 transition duration-300" />
             </span>
           </button>
-
           <Link href="/comparison">
-            <span className="text-gray-600 hover:text-orange-600 ">
+            <span className="text-gray-600 hover:text-orange-600">
               <FaShoppingCart className="hover:scale-110 transition duration-300" />
             </span>
           </Link>
@@ -75,17 +95,30 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-sm">
           <div className="flex flex-col items-start p-4 space-y-4">
-            <Link href="/" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+            <Link
+              href="/"
+              onClick={handleMenuItemClick}
+              className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+            >
               Home
             </Link>
-            <Link href="/shop" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+            <Link
+              href="/shop"
+              onClick={handleMenuItemClick}
+              className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+            >
               Shop
             </Link>
-            <Link href="/about" className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300">
+            <Link
+              href="/about"
+              onClick={handleMenuItemClick}
+              className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
+            >
               Blog
             </Link>
             <Link
               href="/contact"
+              onClick={handleMenuItemClick}
               className="text-gray-800 hover:text-yellow-600 hover:scale-110 transition duration-300"
             >
               Contact
@@ -100,7 +133,7 @@ export default function Header() {
               <span className="text-gray-600 hover:text-red-600 hover:scale-110 transition duration-300">
                 <FaHeart />
               </span>
-              <Link href="/comparison">
+              <Link href="/comparison" onClick={handleMenuItemClick}>
                 <span className="text-gray-600 hover:text-orange-400 hover:scale-110 transition duration-300">
                   <FaShoppingCart />
                 </span>

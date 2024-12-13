@@ -44,7 +44,7 @@ const CartPage = () => {
                 </thead>
                 <tbody>
                   <tr className="border-b">
-                    <td className="py-4 px-4 flex items-center space-x-4">
+                    <td className="py-4 px-8 flex items-center space-x-4">
                       <img
                         src="H1.png"
                         alt="Asgaard sofa"
